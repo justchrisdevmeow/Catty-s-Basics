@@ -28,10 +28,10 @@ static class Program
             float dt = Raylib.GetFrameTime();
             
             // Player movement (WASD)
-            if (Raylib.IsKeyDown(KeyboardKey.W)) playerPos.Y -= 300 * dt;
-            if (Raylib.IsKeyDown(KeyboardKey.S)) playerPos.Y += 300 * dt;
-            if (Raylib.IsKeyDown(KeyboardKey.A)) playerPos.X -= 300 * dt;
-            if (Raylib.IsKeyDown(KeyboardKey.D)) playerPos.X += 300 * dt;
+            if (Raylib.IsKeyDown(KeyboardKey.KEY_W)) playerPos.Y -= 300 * dt;
+            if (Raylib.IsKeyDown(KeyboardKey.KEY_S)) playerPos.Y += 300 * dt;
+            if (Raylib.IsKeyDown(KeyboardKey.KEY_A)) playerPos.X -= 300 * dt;
+            if (Raylib.IsKeyDown(KeyboardKey.KEY_D)) playerPos.X += 300 * dt;
             
             // Catty AI: chase player
             Vector2 dir = playerPos - catPos;
@@ -80,12 +80,12 @@ static class Program
                 Raylib.DrawText("2 + 2 = ?", 220, 230, 30, Color.WHITE);
                 Raylib.DrawText("Press Y for 4, N for wrong", 220, 280, 20, Color.LIGHTGRAY);
                 
-                if (Raylib.IsKeyPressed(KeyboardKey.Y))
+                if (Raylib.IsKeyPressed(KeyboardKey.KEY_Y))
                 {
                     showMath = false;
                     notebooks.RemoveAt(currentNotebook);
                 }
-                else if (Raylib.IsKeyPressed(KeyboardKey.N))
+                else if (Raylib.IsKeyPressed(KeyboardKey.KEY_N))
                 {
                     wrongAnswers++;
                     catSpeed = 1f + wrongAnswers * 0.3f;
