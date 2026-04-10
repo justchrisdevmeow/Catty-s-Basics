@@ -23,4 +23,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: CattyBasics
-        path: ./publish/CattyBasics.exe
+        path: ./publish/
